@@ -1,0 +1,705 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Kelbet Sydykova</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="87db5b77-629a-47fd-a97b-0cd4dc8101e4" class="page sans"><header><h1 class="page-title">Kelbet Sydykova</h1></header><div class="page-body"><div id="cf391d41-aca8-4d6b-be50-f920f7cff810" class="column-list"><div id="8f32e385-0317-411e-9d2d-e537b550b861" style="width:62.5%" class="column"><h1 id="98ea1496-1547-475c-9a1f-dca42c45d4e5" class="">Stewardess</h1><h2 id="0904d6e0-1bf6-4cb0-b184-a0acec192b60" class="">📍 5, Al Saef 1 Street First Central Hotel, 2017 Room, Dubai, UAE</h2><h2 id="c7c12c63-c8d4-4bed-8097-9df12e44f281" class="">📞 +971551995408</h2><h2 id="dfaee573-ba46-48e7-8568-0550033e9137" class="">✉️ <a href="mailto:Kelbet95@mail.ru">Kelbet95@mail.ru</a></h2></div><div id="8606e8c0-7b67-4f2c-8d37-8d14365d9b93" style="width:37.49999999999999%" class="column"><figure id="2cc1e166-46c9-45a9-8423-e55c67b67235" class="image" style="text-align:center"><a href="Kelbet%20Sydykova%2087db5b77629a47fda97b0cd4dc8101e4/WhatsApp_Image_2022-10-08_at_12.09.41_AM.jpeg"><img style="width:192px" src="Kelbet%20Sydykova%2087db5b77629a47fda97b0cd4dc8101e4/WhatsApp_Image_2022-10-08_at_12.09.41_AM.jpeg"/></a></figure></div></div><h2 id="05769b2f-750f-4d85-81dc-76c20a29ddb2" class="">Summary:</h2><p id="72fa44ec-64a5-41ed-9f00-da9f02221b54" class="">Results-focused stewardess dedicated to maximizing satisfaction and retention with proactive attention to individual customer needs. Smoothly handles questions and resolves concerns with excellent problem-solving abilities and attention to detail. Multitasks and manages time well to meet performance targets consistently.</p><h2 id="4fc3e558-d8b8-4809-8de5-51760dd12496" class="">🧩 Skills:</h2><div id="6e837650-a4d2-47ce-bea1-6b75728ba786" class="column-list"><div id="c67860f7-53eb-4840-b42f-9d263f554521" style="width:50%" class="column"><ul id="cb920eab-ecca-4cb8-bb5d-c94c6616434f" class="bulleted-list"><li style="list-style-type:disc">Preflight briefings</li></ul><ul id="50d9b608-9164-4a25-b6b0-a0ce1d7aaaee" class="bulleted-list"><li style="list-style-type:disc">Emergency care</li></ul><ul id="379defa6-5c05-48f9-ab3d-9c92a2f37ed7" class="bulleted-list"><li style="list-style-type:disc">Cleanliness and sanitation</li></ul><ul id="e878fa9d-5c49-4c00-b5d3-967a7fddec4c" class="bulleted-list"><li style="list-style-type:disc">Verbal and written communication</li></ul><ul id="1d3593c8-8d92-468b-a94d-2a15e53947d9" class="bulleted-list"><li style="list-style-type:disc">Crew coordination</li></ul><ul id="38fe7cf7-5f3f-43e6-9559-962399dbe4d8" class="bulleted-list"><li style="list-style-type:disc">Hospitality service expertise</li></ul><ul id="bb731111-5f55-42e9-a005-c4b7634b4a26" class="bulleted-list"><li style="list-style-type:disc">Company policy adherence</li></ul></div><div id="17ad9a38-dd76-466a-9ca5-588815d3f8a7" style="width:50%" class="column"><p id="e5e0abc2-65be-4bb8-be87-919a42051139" class="">⬛⬛⬛⬛⬜</p><p id="846ad41b-e99a-4a37-bd6e-bf9810c53015" class="">⬛⬛⬛⬛⬛</p><p id="5482c63c-9798-413d-a3cb-ff26bb4e23a9" class="">⬛⬛⬛⬛⬛</p><p id="5328028e-7987-4cb8-8d17-34c924d4909e" class="">⬛⬛⬛⬛⬛</p><p id="57ee8939-8465-4359-b414-dc802cf6ec9b" class="">⬛⬛⬛⬛⬛</p><p id="a8428e83-3f8c-4f96-a9d7-7e8ce67b1c2f" class="">⬛⬛⬛⬛⬛</p><p id="8ebea0a2-53ed-4bdd-988e-33c9d72706b3" class="">⬛⬛⬛⬛⬜</p></div></div><h2 id="325a3e21-c07d-4016-8746-10c846894ebe" class="">💼 Professional experience:</h2><div id="e434e77d-01b4-4af8-b90a-2c6683cf4f13" class="column-list"><div id="a4bfc984-50cc-4c33-a8ae-f5dfda4cf0cd" style="width:12.5%" class="column"><p id="e45ff6b0-013c-4ab7-8748-9680a1401df0" class="">November 2021 - </p><p id="30b9ff64-17ef-480a-9ae4-8c4a22c8d0cf" class="">May 2022</p><p id="3bd46b0f-9859-450f-a38c-7e83e4f50470" class="">
+</p><p id="3c6b61f7-807e-4fff-9e6f-21658f4516b9" class="">
+</p><p id="b7a4f433-c552-4b90-9c82-29b1b1ddb13a" class="">
+</p><p id="01a2a270-8163-4251-87fe-3aae35ef8bf0" class="">
+</p><p id="da08bae5-9fab-46f0-8bc6-7c61aa8620ca" class="">
+</p><p id="336053ad-bff5-4d2c-9655-fc9022983cf4" class="">
+</p><p id="10e84e79-42e7-4933-b071-49293472419e" class="">
+</p><p id="a5f482b5-d996-45a4-9e35-d8e79c672042" class="">
+</p><p id="a4daec19-ca5d-46ce-92d1-300401b61211" class="">
+</p><p id="d4b4026e-af48-4673-83e3-8da2a1e6e1e3" class="">
+</p><p id="a0b73d19-990a-4ff1-8fd8-740c2e9ccfeb" class="">December 2020 - September 2021</p><p id="fedd22fc-ea07-4e92-8753-c43c9df2c11e" class="">
+</p><p id="b064102f-f1d6-4543-a666-b11b41bec268" class="">
+</p><p id="dc05c8bf-db3b-43c5-8c53-d47f3c8c81fe" class="">
+</p><p id="f0a109c6-2f22-4612-aabe-7647ef3138f6" class="">
+</p><p id="f67e91a8-9fbf-400d-8b1b-146ecca7b165" class="">
+</p><p id="f5abd78d-d06d-41aa-9fee-82568579a94c" class="">
+</p><p id="f19e83f8-2a9c-4aa0-93ea-f2359905c7b9" class="">
+</p><p id="3eae124c-05bd-4e9c-898d-472395ffb661" class="">
+</p><p id="44c493e4-4ac9-4d97-ad07-9531de047357" class="">
+</p><p id="ba39b0d9-d66a-4c8c-adfd-321bd9a3e873" class="">
+</p><p id="379b8dd0-dae8-40ec-be03-e65e44370e69" class="">
+</p><p id="8c5b7d62-2b36-42d7-b61d-52fa4b8c579d" class="">
+</p><p id="fbd9fd8d-118a-4767-b9ae-e0df7a3f3dae" class="">May 2019  - November 2020</p><p id="10f580ee-94ff-4713-a2b2-be08ce964f6c" class="">
+</p><p id="276b43ed-ab62-4475-8d06-2f8813c61d4c" class="">
+</p><p id="b39a811b-011e-47ab-9d09-9caf0109aa5b" class="">
+</p><p id="644adfb0-0385-40b4-814c-a40a9d3d079c" class="">
+</p><p id="3ba8c524-01e7-4a2b-ba62-7c528609b653" class="">
+</p><p id="155d010f-1116-4dcb-8dfb-d968d097bead" class="">
+</p><p id="85b5eeba-f3b8-4e8c-8860-0cc4b18b18b5" class="">
+</p><p id="f83f52b6-9148-4236-a4ad-e3111aed8f5f" class="">
+</p><p id="5cb0cf97-fd55-469d-8f67-d032ff4851cd" class="">
+</p><p id="ac477ad4-18d5-4859-a00c-250d11c383da" class="">
+</p><p id="97248477-31e6-40be-a66c-317dc21b539b" class="">
+</p><p id="3d36d39f-2e17-4f77-85ac-37c69ddfbf35" class="">
+</p><p id="7f7718e2-d34a-412f-9255-cea8e5185f1a" class="">March 2017 - </p><p id="65a68e11-945e-4268-ad28-c1a5a92f60cb" class="">April 2019</p></div><div id="e78b174b-5211-4abc-9741-053592d12c23" style="width:87.5%" class="column"><h3 id="482bf828-93ff-44a5-91a7-583c8a0f216e" class="">Receptionist-master</h3><p id="ca9c7f4a-f01f-4d7a-84ec-f334ea893fda" class="">Beauty Salon &quot;Lips and brows”, Dubai</p><ul id="d3cfdcba-f985-455a-923a-cfbac35859ec" class="bulleted-list"><li style="list-style-type:disc">Confirmed appointments, communicated with clients and updated client records.</li></ul><ul id="aa5665b6-efc3-450a-9469-0ba13b9ec0bb" class="bulleted-list"><li style="list-style-type:disc">Managed multiple tasks and met time-sensitive deadlines.</li></ul><ul id="01661e27-c2bc-4ab4-b939-4b3a2142e91b" class="bulleted-list"><li style="list-style-type:disc">Greeted incoming visitors and customers professionally and provided friendly, knowledgeable assistance.</li></ul><ul id="e2018918-f336-4d99-bd53-375c86eb38b1" class="bulleted-list"><li style="list-style-type:disc">Resolved customer problems and complaints.</li></ul><ul id="f8d3ef2d-5bc4-4780-b585-0bc9b3026ebb" class="bulleted-list"><li style="list-style-type:disc">Kept reception area clean and neat to give visitors a positive first impression.</li></ul><ul id="f4414dbf-ae9a-4f77-aaba-7b39d6ac7a9c" class="bulleted-list"><li style="list-style-type:disc">Maintained confidentiality of information regarding clients and the company.</li></ul><h3 id="48bb523f-adc5-4ae3-b255-6484fc1f588f" class="">Hostess</h3><p id="d890bdaa-f0be-4865-8f32-b549127c4a9c" class="">Restaurant &quot;Mongol”, Almaty</p><ul id="3ce561e1-e88d-4ad8-9533-a3fdf21f7b70" class="bulleted-list"><li style="list-style-type:disc">Assigned patrons to tables suitable for needs and restaurant section rotation.</li></ul><ul id="2768a0fd-a6d4-4505-b002-ae4e84028844" class="bulleted-list"><li style="list-style-type:disc">Cultivated positive guest relations by managing information and orchestrating speedy seating.</li></ul><ul id="43f584a2-39fe-4fc0-9e87-9557940955a1" class="bulleted-list"><li style="list-style-type:disc">Took reservations and to-go orders by phone answered customer questions and informed of accurate wait times.</li></ul><ul id="4b53fc8d-d746-4d28-97ca-65f2b5c215b4" class="bulleted-list"><li style="list-style-type:disc">Resolved guest and employee complaints to maintain complete customer satisfaction and workforce effectiveness.</li></ul><ul id="67e593d3-565a-4346-90a8-2d5253693c28" class="bulleted-list"><li style="list-style-type:disc">Answered customer questions about hours, seating and menu information.</li></ul><ul id="a0329926-6ad9-471c-ae28-049258a65141" class="bulleted-list"><li style="list-style-type:disc">Stayed in open communication with the kitchen team to assess cooking times, avoid worker overload and minimize customer dissatisfaction.</li></ul><h3 id="162e5745-895d-4972-9d69-b035ed93adcd" class="">Permanent Makeup Artist</h3><p id="3eb39743-e692-44a6-903f-aecc4825882f" class="">Beauty Salon &quot;bota_eyebrows”, Almaty</p><ul id="dee70ae0-5fb9-4c28-857f-04e9e9aed386" class="bulleted-list"><li style="list-style-type:disc">Conducted consultations to understand the client&#x27;s desired outcome and assessed skin type and facial structure.</li></ul><ul id="c7cc7e79-c3f7-4ebb-872c-9ae64775f6e9" class="bulleted-list"><li style="list-style-type:disc">Kept up-to-date with style industry standards, trends, and techniques to provide optimal aesthetics services to every client.</li></ul><ul id="41ce6216-96d7-4fcd-b6cf-5f14f7cc98b7" class="bulleted-list"><li style="list-style-type:disc">Leveraged artistic skills and expertise in the use of makeup to enhance the beauty and physical attributes or radically change appearance.</li></ul><ul id="689b278c-dbb8-4eff-b5df-3cf9c69a9479" class="bulleted-list"><li style="list-style-type:disc">Employed a variety of cosmetics to produce fresh looks, enhance facial features and manage skin tone.</li></ul><ul id="39c6ba22-6d60-45af-bc0a-834bfda5af51" class="bulleted-list"><li style="list-style-type:disc">Assessed customer skin tone and complexion to determine appropriate products and materials to use.</li></ul><ul id="0273d79f-7cc3-45c0-87a5-f1a0939fbe14" class="bulleted-list"><li style="list-style-type:disc">Taught master classes to inspire potential makeup artists or help people expand their knowledge and skills.</li></ul><h3 id="a63d9bc1-0952-4695-b54c-f5b2771ad992" class="">Receptionist</h3><p id="6a17e8cb-1b37-4f2c-9a5a-2b3e6e2f771c" class="">Beauty Salon of Saniya Ilyassova, Almaty</p><ul id="e77454c7-6307-48ff-8644-e8376fbbea2e" class="bulleted-list"><li style="list-style-type:disc">Confirmed appointments, communicated with clients, and updated client records.</li></ul><ul id="b423f297-2468-4b76-8d9e-e5029de5ae4a" class="bulleted-list"><li style="list-style-type:disc">Answered central telephone system and directed calls accordingly.</li></ul><ul id="32d5a792-5761-41d7-9603-f4a0ff288614" class="bulleted-list"><li style="list-style-type:disc">Provided callers with address, directions, company website, and related information.</li></ul><ul id="b7d1ca1d-1613-4ec7-b6a1-48c85a9c2c24" class="bulleted-list"><li style="list-style-type:disc">Answered phones promptly and directed incoming calls to the correct offices.</li></ul><ul id="54f0b980-ab28-45c7-9ea3-736396817270" class="bulleted-list"><li style="list-style-type:disc">Resolved customer problems and complaints.</li></ul><ul id="7ff20c7a-78cc-43c6-9038-5c7830a5edc7" class="bulleted-list"><li style="list-style-type:disc">Answered a large volume of incoming calls daily to resolve customer issues and schedule appointments.</li></ul><ul id="51d19fd1-a056-46a9-b636-2740c1c33700" class="bulleted-list"><li style="list-style-type:disc">Greeted incoming visitors and customers professionally and provided friendly, knowledgeable assistance.</li></ul></div></div><h2 id="acaa52b0-99a1-4e87-b0f3-4baa4902d013" class="">🎓 Education:</h2><div id="e0b2ac69-860d-495a-b865-e0b53eb04b96" class="column-list"><div id="aa5cf4ff-d2b9-4f22-8b46-54dd521cf542" style="width:12.5%" class="column"><p id="a2dd4c2e-d65c-4281-b369-1065292cee32" class="">September 2013 - June 2017</p><p id="7c8aa657-7817-4835-8b26-8dcd5bb1488d" class="">
+</p></div><div id="6bde8769-4a8f-4e9f-9790-8edda2b050af" style="width:87.5%" class="column"><h3 id="1a216457-6a52-4ee9-bfff-71aa1c28b2c0" class="">Bachelor of Science</h3><p id="4611c095-3e97-4a4d-a749-4c72a6a4c237" class="">Kazakh Head Architectural And Construction Academy, Almaty, Kazakhstan</p><p id="943c944b-dd77-44a8-b949-f1c7398691a2" class="">
+</p></div></div></div></article></body></html>
